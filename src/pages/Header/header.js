@@ -183,7 +183,7 @@ function Header() {
           <div className="large_menu">
             <a
               className="github"
-              href="https://github.com/kasodon"
+              href="https://github.com/kleungkt"
               target="_blank"
             >
               <div className="github_box">
@@ -205,7 +205,7 @@ function Header() {
 
             <a
               className="linkedin"
-              href="https://www.linkedin.com/in/edewor-onyedika/"
+              href="https://www.linkedin.com/in/kevin-leungkotsun/"
               target="_blank"
             >
               <div className="linkedin_box">
@@ -226,7 +226,7 @@ function Header() {
             <a
               className="twitter"
               href="https://twitter.com/web3_overlord"
-              target="_blank"
+              target="_blank"e
             >
               <div className="twitter_box">
                 <svg

@@ -349,6 +349,9 @@
         width: 80px;
         max-width: 120px;
       }
+      .box-content-link{
+        color:#F5F5F5;
+      }
       .box-content {
         flex: 0 18%; //18%
         height: 60px;
@@ -368,7 +371,7 @@
           flex: 0 30%;
           height: 50px;
         }
-
+        
         .box-icon {
           padding-left: 10px;
           padding-right: 0.5rem;
@@ -871,8 +874,8 @@
     align-items: center;
     .article {
       height: 35rem;
-      width: 27rem;
-      background-image: url("./../../assets//images//robo-mi.png");
+      width: 60rem;
+      background-image: url("./../../assets//images//LeungKoTsun_Diploma.png");
       background-size: cover;
       background-position: right;
       border-radius: 15px;

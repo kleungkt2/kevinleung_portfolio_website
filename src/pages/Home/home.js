@@ -47,21 +47,21 @@ import { ReactComponent as SassImg } from "./../../assets/images/sass.svg";
 import { ReactComponent as TypescriptImg } from "./../../assets/images/typescript.svg";
 import { ReactComponent as SolidityImg } from "./../../assets/images/solidity.svg";
 const MathematicsData = [
-  { text: ["Differential", "Equations"] },
-  { text: ["Discrete", "Maths"] },
-  { text: ["Linear", "Algebra"] },
-  { text: ["Maths", "Analysis"] },
-  { text: ["Maths for", "Data Science"] },
-  { text: ["Matrix", "Computation"] },
-  { text: ["Multivariable", "Calculus"] },
-  { text: ["Numerical", "Analysis"] },
-  { text: "Optimization" },
-  { text: "Probability" },
-  { text: ["Real", "Analysis"] },
-  { text: ["Regression", "Analysis"] },
-  { text: ["Statistical", "Inference"] },
-  { text: ["Stochastic", "Process"] },
-  { text: ["Time", "Series"] },
+  { url: "https://github.com/kleungkt/differential-equations", text: ["Differential", "Equations"] },
+  { url: "https://github.com/kleungkt/discrete-maths", text: ["Discrete", "Maths"] },
+  { url: "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", text: ["Linear", "Algebra"] },
+  { url: "https://github.com/kleungkt/maths-analysis", text: ["Maths", "Analysis"] },
+  { url: "https://github.com/kleungkt/data-analytics-tool", text: ["Maths for", "Data Science"] },
+  { url: "https://github.com/kleungkt/matrix-computation", text: ["Matrix", "Computation"] },
+  { url: "https://github.com/kleungkt/multivariable-calculus", text: ["Multivariable", "Calculus"] },
+  { url: "https://github.com/kleungkt/Numerical-Analysis", text: ["Numerical", "Analysis"] },
+  { url: "https://www.edx.org/learn/computer-programming/seoul-national-university-introduction-to-optimization?index=product&queryID=d52458e729cc2b6148a1c606e1b845e0&position=2&results_level=first-level-results&term=+Introduction+to+Optimization&objectID=course-597ffd81-454b-4d69-b28c-3319c6cfcfd5&campaign=Introduction+to+Optimization&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch", text: "Optimization" },
+  { url: "https://github.com/kleungkt/probability", text: "Probability" },
+  { url: "https://github.com/kleungkt/Real-Analysis", text: ["Real", "Analysis"] },
+  { url: "https://github.com/kleungkt/Regression-Analysis", text: ["Regression", "Analysis"] },
+  { url: "https://github.com/kleungkt/Statistical-Inference", text: ["Statistical", "Inference"] },
+  { url: "https://github.com/kleungkt/Stochastic-Processing", text: ["Stochastic", "Process"] },
+  { url: "https://www.coursera.org/learn/tensorflow-sequences-time-series-and-prediction", text: ["Time", "Series"] },
 ];
 const DataScienceTechStackData = [
   {
@@ -1642,15 +1642,35 @@ function Home() {
         </div>
         <div className="tooling-box">
           {MathematicsData.map((item, index) => (
-            <div key={index} className="box-content box-content-maths">
+            item.url ? (
+            <a href={item.url} className="box-content box-content-maths box-content-link">
+              <div key={index}>
               <div className="box-text">
-                {Array.isArray(item.text) ? (
+                {
+                 Array.isArray(item.text) ? (
                   item.text.map((text, i) => <p key={i}>{text}</p>)
                 ) : (
                   <p>{item.text}</p>
-                )}
+                )
+                }
+                
               </div>
-            </div>
+              </div>
+              </a>)
+              :
+              (<div key={index} className="box-content box-content-maths">
+              <div className="box-text">
+                {
+                 Array.isArray(item.text) ? (
+                  item.text.map((text, i) => <p key={i}>{text}</p>)
+                ) : (
+                  <p>{item.text}</p>
+                )
+                }
+                
+              </div>
+              </div>)
+              
           ))}
         </div>
       </div>
@@ -1670,23 +1690,26 @@ function Home() {
       </div>
       <div className="featured hidden">
         <div className="featured-title">
-          <h2>Featured</h2>
+          <h2>Education</h2>
         </div>
         <div className="featured-box">
           <div className="article">
             <div className="top">
               <p>
-                Publisher: <span>Hackernoon</span>
+                 2018-2022
               </p>
             </div>
             <div className="bottom">
               <h4>
-                An Intro to Algorithms and Data Structures (Javascript Edition)
+                <p>
+              Hong Kong University of Science and Technology
+              </p>
+              <p>{"Triple Majors in Data Science, Computer Science and Mathematics(Applied)"}</p>
               </h4>
               <div className="info">
                 <p>Sept 15, 2022</p>
                 <a
-                  href="https://hackernoon.com/an-intro-to-algorithms-and-data-structures-javascript-edition"
+                  href="https://drive.google.com/file/d/1zq2mZ5e2JFVV-rnQiedgimXLkJZ3rYmj/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                 >
